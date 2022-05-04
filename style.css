@@ -30,6 +30,8 @@ body {
     font-size: 1.6rem;
 
     text-align: center;
+
+    overflow: overlay;
 }
 
 .wrapper {
@@ -173,13 +175,23 @@ nav.scroll svg:nth-child(1) path {
     fill: white;
 }
 
-nav.scroll svg:nth-child(2) path {
+nav.scroll button path {
     stroke: white;
+}
+
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 /*============ MENU-EXPANDED ============*/
 body.menu-expanded {
     overflow: hidden;
+}
+
+body.menu-expanded > :not(nav) {
+    display: none;
 }
 
 .menu,
